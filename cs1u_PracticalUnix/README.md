@@ -9,6 +9,7 @@ video lecture: http://openclassroom.stanford.edu/MainFolder/CoursePage.php?cours
 important notes:
 
 ***************zsh globbing*****************
+
 use zsh
 
 chsh to change default shell
@@ -23,7 +24,7 @@ echo **/*(rwxAIERWX)
 
 echo **/*(rw)
 
-echo **/*(mM-5)  -> all files modified within last 5 months
+echo **/*(mM-5)  -> all files modified within last 5 months, [a m c],[Mmwh]
 
 echo **/*(mm+1)
 
