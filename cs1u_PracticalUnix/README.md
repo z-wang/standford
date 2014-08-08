@@ -7,6 +7,7 @@ video lecture: http://openclassroom.stanford.edu/MainFolder/CoursePage.php?cours
 
 ----------------
 important notes:
+
 ***************zsh globbing*****************
 use zsh
 
