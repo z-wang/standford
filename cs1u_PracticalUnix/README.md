@@ -35,3 +35,27 @@ echo **/*(*m-1)
 echo **/*(.m-1)
 
 echo **/*(L+5)   ->file greater than 5 bytes, m for mb, k for kb
+
+diff fromfile1 tofile2   -y --width = 80 mean in the same screen two columns, -b will ignore inline spaces and -B will ignore blank lines
+
+find path command name: 
+
+find . -name "*resume"
+
+find / -perm a=rwx, g=rwx, u=rwx   all,group,user
+
+find . -name "*resume*" -exec echo {} \;
+
+find . -name "*resume*" -exec cp {} \;
+
+locate "*resume*"      need to update db using "sudo updatedb", the search speed will be much faster than find, but cannot search a sepcified dir, the whole system
+
+locate "*resume*" | grep dir    for a sepecific dir.
+
+
+
+
+
+
+
+
