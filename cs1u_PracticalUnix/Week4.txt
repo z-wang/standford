@@ -1,0 +1,70 @@
+Week 4: Grep and Regular Expressions
+
+Submitted by laothao on Sat, 10/26/2013 - 00:35
+As always, group work is encouraged.
+
+SETUP
+
+0.  Watch the grep videos and learn to love regular-expressions.  Also, lecture notes are below each video.
+
+1.  zsh is much more intuitive in how it deals with special characters and quotes and such. If you're on a myth machine, you're running csh by default.
+
+2.  Make sure that you have an alias from grep to grep -P (capitalization matters).  This will use perl style regular expressions.  If you aren't using perl style regular expressions, a lot of the stuff in the videos won't work.  To do this in zsh or bash, add the following line to your ~/.zshrc or ~/.bashrc file:
+
+alias grep="grep -P"
+
+Sam's .zshrc has this, but make sure you have the most recent version -- an old version overwrote that with a different grep alias.
+
+Also, Macs do not have the -P flag for access to perl style regular expressions with grep. With an upgrade to OSX 10.8, Apple removed support for this feature. If you're running any version of OSX below 10.8, you should still have support for the -P flag with grep. If you're unsure, type "man grep" and see if the -P flag exists. Otherwise, a command like this will not work:
+
+grep "n{2}gdev{2}" *
+
+and you will have to escape characters like this:
+
+grep "n\{2\}gdev\{2\}" *
+
+3.  Download grep-exercises.tar.gz and untar it. 
+
+You can use
+
+    tar -xvzf someTarFile
+
+to extract (x) and display verbose (v) information from a gzipped (z) file (f).  If the file is not gzipped (ie, the format ends in .tar rather than .tar.gz), you will need to use tar -xvf rather than tar -xvzf.
+
+PHONE NUMBERS
+
+4.  Once you've untarred gre-exercises.tar.gz, open it and cd into the phone-numbers directory. There are 5 numbers directories.  Each of them has phone numbers intermixed with text.  Your task will be to make a regular expression that matches all of the well-formed phone numbers in every file in the directory.  
+
+Numbers 1 is the easiest and Numbers 5 is the hardest.  Each successive file adds a new way that numbers can be formatted.  If a number is mal-formed, like the missing parens case for Numbers 4 or the missing dashes case for Numbers 5, you SHOULD NOT match those numbers.
+
+Each directory has a "golden" file that has all of the phone numbers.
+
+out.gold is what your grep command should output.  That is, if you run diff between out.gold and your grep output, there should be no output.  You will need to make sure that your grep command includes the golden file and excludes out.gold.  Also make sure that you run your grep command from within the directory -- otherwise, grep will include the path to every file, and that will mess with your output.
+
+Note that the syntax that the shell uses to glob for files (select multiple files) is NOT the same as normal (perl style or grep style) regular expressions.  If you don't know how to do it, then try making an echo command that prints out the name of two files (echo is pretty much the simplest command, so we often use echo when we want to test out something about shell syntax).  Then, make an echo command that prints out the name of every file that starts with cs1u.  Then, make an echo command that prints out all of the files that start with cs1u and the golden file.  If you can't figure out how to do all of the files, you might want to check out the video on ZSH globbing.
+
+For the first three, avoid using "OR"s. It's definitely possible. If you want to use an OR for the later ones, remember that grep treats whitespace literally.
+
+For the last two, it is a mistake to look for an "elegant" solution.
+
+If you want to output your command to a file, you can check the video on IO redirection.  Basically, grep foo bar > baz will grep for the pattern "foo" in the file "bar" and output the results to the file "baz."
+
+numbers1 - Search for numbers with dashes (ie, 123-456-7890)
+
+numbers2 - Search for numbers with dashes and those with no dashes (ie, 1234567890)
+
+numbers3 - Search for numbers with dashes, no dashes, and those with parens (ie, (123)456-7890)
+
+numbers4 - Again, you want dashes, no dashes, parens.  But someone malicious introduced malformed output into our files: missing parens (ie, 123456-7890 or 123)456-7890) -- so you SHOULD NOT match malformed numbers.
+
+numbers5 - Dashes, no dashes, parens.  Now you have missing parens and missing dashes (ie, 123-4567890) as part of the malformations-- again you SHOULD NOT match malformed numbers.
+
+EXTRA PROBLEMS (if you have time on your own, try these!): 
+
+5. In the match-only-one folder there are three group-references files.  You need to make a regular expression that will match every line in group-references-1 and no lines in group-references-2 or group-references-3.  Then, make one that matches 2 but not 1 or 3.  Then, make one that matches 3 but not 1 or 2.  Do the same for lookarounds.  
+
+Hint: group-references should make use of group references as per the lecture notes on the third video and lookarounds should make use of lookarounds as per the fourth video.
+
+However, you can't put group references into a character class.  For the third one, you might find it necessary to use lookarounds or to invert the whole expression (check out the grep man page).
+
+6. Go through the exercises on the lecture notes of each video.
