@@ -1,0 +1,56 @@
+Week 6: Web
+
+Submitted by laothao on Mon, 11/04/2013 - 11:14
+cURL 
+
+URL hacking using GET
+You will find a super important voting website located at: http://stanford.edu/~lao793/cgi-bin/cs1u/simplevote.html 
+Try voting using your web browser.
+You don't like candidates 1, 2, or 3, but the other people aren't in your district.  Figure out how to vote for candidate 1000. Hint: Check your URL
+If you've figured out how to vote for candidate 1000 through your browser, try it again from the command line. NOTE: The voting page takes your input and passes it to a different page to process. To figure out where your input is passed, look at the HTML, or look at the URL after you hit submit. This is the same for the following problems and you will most definitely need this information. If all you're getting is the voting form in HTML, you are curling the wrong page.
+URL hacking a form submission using POST (cURL)
+Those tricky web admins have figured out your little ploys and have worked tirelessly to trump your little ploys. Their new website is at: http://stanford.edu/~lao793/cgi-bin/cs1u/securevote.html 
+Trump them again and vote for candidate 1000!  
+So the president heard how awesome these guys were (they did a good job of keeping your little deeds under-wraps), so he hired them to make the new super-safe presidential voting system. The developers decided to ramp up their security even more and are now 100% sure you won’t hack them given they are using this super posh new technology called COOKIES. If you head over to their website: http://stanford.edu/~lao793/cgi-bin/cs1u/superSecureVote.php, you can’t even see the poll! But we learned the president’s identity has something to do with http://stanford.edu/~lao793/cgi-bin/cs1u/presidential.php.
+Using your web browser, you will notice that after visiting the presidential site, you can see the superSecureVote page.  However, you can't vote for number 1000 because you don't know how to POST using your browser.  So, you're back to the command line.  How can you use cookies?
+Note that there are two ways to use cookies.  One of them uses cookie files, like your web browser does, which is much easier to deal with if you have many values saved.  Try using that way.
+Don’t let them win!
+Difference between GET and POST. Use our super-shiny API at http://stanford.edu/~lao793/cgi-bin/cs1u/method.php to issue GET and POST requests to learn what conventional wisdom says about them!
+Use cURL to issue a GET and POST request to that page.  (note: this should be two requests, not one).
+There are many other different types of requests, but POST and GET are the two most common ones you'll encounter.
+Download a photo using CURL!
+http://stanford.edu/~lao793/cgi-bin/cs1u/curl-meme.jpg
+If you're using a gnome desktop, you can use eog (eye of gnome) to open the photo from the command line.
+Encouraged by that picture, you want to vote even more!
+Make a script (python, bash, whatever you want) that will keep executing one of your earlier cURL commands to repeatedly vote.
+How do you use the cURL wrappings in the programming language of your choice (Python, C++, etc)?
+Fun things to do if you have time!
+
+Console Web Browsing
+w3m is a console based web browser.  It's a little step up from cURL.  It isn't installed on the Myth machines, so you'll need to use your own computer and install it there.  Alternately, you could use lynx, which does come installed.
+
+You can briefly check out the man page, but the online guide at  http://w3m.sourceforge.net/MANUAL or SHIFT+H when inside w3m are both much more helpful.
+
+w3m can open any html file on your local computer.  Just use w3m filename to open an html file using w3m.
+Use wget to download http://www.google.com/
+Use w3m to see what that file looks like
+quit out using q or SHIFT+Q
+Using the same syntax, w3m can also look at webpages.  Here is a guide on how to do some basic stuff
+run w3m google.com 
+use your mouse to click on the search bar.  Alternately, get the cursor there using the arrow keys, hjkl, or tab.
+hit enter.  type whatever you want to search for.  hit enter to enter the text.
+double click on the "google search" link.  Alternately, get the cursor to the link using the the keyboard, and hit enter.
+Navigate to one of the webpages in the same way.
+Hmm, that wasn't the page you wanted.  Hit SHIFT+B to go back.
+Nothing at the top of the Google page is interesting.  Go down a few pages using spacebar.
+Go back up using lowercase b.
+Actually, I just want to see all of the pages that I could go to from here.  Hit M-m (meta + m.  If you have an alt key, use alt+m.  If you don't, then hit escape, release it, and hit m).  Select a page.
+I'm bored with searching.  Let's go to a new page.  Hit SHIFT+U, and type in wikipedia.org.
+Wait, I want to see my page history (like when you hold-click on the back button in a normal browser)!  Press s.
+Hmm, right, that's just Google, which I just said I was bored with.  How do I get rid of this w3m popup?  Press ctrl+c.
+A few years ago, there was a browser that introduced tabbed browsing, and I hear that's all the rage.  I want a tab too!  Press SHIFT+T to open a new tab.  Use U to move that tab to a new URL.  
+Use { or } to switch between your tabs.
+Use Ctrl + q to close the old tab.
+A lot of things are similar to vim.  For instance, if you want to search, you can use / (or ? to search backwards), and you can use n to get the next result (or N to get the backwards next result).
+Did something weird happen?  Look at the help page by typing SHIFT+H.  If your mouse isn't working in w3m, you might have accidentally hit m.  Just hit m again to reenable it.
+Now, use what you know to check your email (or facebook, as the case may be)!  Note that Gmail uses too much Javascript for w3m to handle the actual login.
