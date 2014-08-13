@@ -1,0 +1,60 @@
+Week 2: Intro
+
+Submitted by laothao on Sat, 10/26/2013 - 00:37
+The purpose of this lab is to get setup with Unix and with your environment.  We expect that you have watched all of the videos in the intro module listed in the Video Schedule.  
+
+Your tasks in this lab are as follows:
+
+1.  Get Unix. 
+
+To accomplish this, do the following:
+
+Download Ubuntu at: http://www.ubuntu.com/download/desktop
+Download and install some VirtualBox
+Then, you will point it to the ISO that you downloaded from the Ubuntu website (or another Linux distro's website). The specific directions should be listed when you first run your virtual machine.
+One thing to keep in mind: when you install Linux, it lets you run a "live disk" to get started fast, but this WILL NOT install Linux.  For this course, you should not run the live disk.  You need to actually install it.
+
+If you're getting an error where you can't boot, see this form page: https://courseware.stanford.edu/pg/forum/question/286520/trouble-running-virtual-machine-on-macbook-pro.
+
+2.  Getting to know your shell. In a sense, the shell allows you to drive your computer in manual mode. The shell takes input from a user, interprets the input as commands, then directs the operation of a computer by executing the commands. Shells come in a few flavor such as bash, zsh, and many others but most likely your machine is running a bash shell. This is a very important concept so make sure those sentences sunk in. In order to interact with your shell, you open a graphical program called the Terminal. If you're running Ubuntu, you can find the Terminal application if you go to your Dash home then search for 'Terminal'. If you're using your Mac, you can also perform a search for the Terminal application. We'll be using the terminal quite often so I suggest you create a shortcut to it by dragging it to your dock or navigation bar once you've found the application. Once you've got your terminal up and running, you can enter and execute the commands you've seen in the intro videos.
+
+2.  Learn your editor. Your editor will be the tool you use to create/edit files and programs. We mention two VERY popular text editors: vim and emacs. If you want to try vim, you can run a vim tutorial program by typing 'vimtutor' (without the quotes) at the command line then pressing return. If you want to try emacs, you can run emacs and type Ctrl+h t (hold control, type h, release control and h, type t) after emacs starts. 
+
+What if vim or emacs isn't installed on your system? If you're using Ubuntu, you can install something using apt-get.  To install emacs, you might type
+
+      sudo apt-get install emacs23
+
+sudo means "super user do" and it lets you run a command as an administrator. 
+
+3.  Set up your shell and editor configuration files.  You now have a shell and a text editor. You can customize these to your heart's content! Though there are already many different types of shells with different features, you can customize your shell even more by creating a configuration file.  These files let you change the way your commonly used programs look and feel (and the way they function in some cases).  A configuration file is typically a 'dot file,' which means that it will be hidden unless you use 'ls -a' to list ALL files.  They will typically also be in your home directory.  You can configure many things, including your shell AND text editor. The config file for vim is .vimrc, for emacs is .emacs, for the zsh shell, it's .zshrc, and for the bash shell it's .bashrc. If you're on a Mac and not running Ubuntu, you might also have a file called .bash_profile. A quick google search of '.bashrc vs .bash_profile' will explain to you the difference between the two. But if you want to skip the google search, add any extensions you want in the .bash_profile file.
+
+You probably won't have these files already, so you'll have to make them using a text editor. Assuming you're in your home directory, you can just execute 'vim .vimrc' to create your configuration file for the vim editor. You can add things such as automatic indentation, key mappings, line numbers, and so forth just by writing a few lines of text. For example, my .vimrc file might contain the line:
+
+syntax on
+
+In order to enable syntax highlighting. Do a google search to figure out what you need to type in order to acheive what you want. 
+
+Similiarly, to create a configuration file for your shell, you just create it with your text editor. If you're running zsh, you can do 'vim .zshrc' then start customizing away. Do a google search to learn more about how you can configure your shell and text editor, be creative! If you're on a Mac or Ubuntu, try adding this to your shell's config file:
+
+alias m="ssh -X yourSUNetID@myth.stanford.edu"
+
+This will make it so that when you type in the letter 'm' and press return, the command "ssh -X yourSUNetID@myth.stanford.edu" will be executed. If you don't know, this command is to gain ssh access via the terminal to one of the myth cluster machines. You can change the input command 'm' to be anything you want as well as the meaning it maps to. If you're using a long command again and again, as you'll have to do in some classes, making an alias will be VERY helpful. Many advanced programmers and users have multiple aliases in their config files.
+
+It's fun to create your own configuration files. You can see Sam's vimrc and zshrc at http://code.google.com/p/samking-config-files/source/browse/.  You are encouraged to download them for your own use.  Also note that some of them use on the other files in the repository, so you may want to download everything.  
+
+To download everything go to the checkout link at the above site and run the command that it tells you to run.  If you don't have git installed, you can run
+
+ sudo apt-get install git 
+Then, go into the folder that it created and run the setup-startup-scripts.bash file.  To run any command, you just have to type in the path to that command in your shell.  If you are in that folder, you can type
+
+ ./setup-startup-scripts.bash 
+to run it.  It will give you some warnings and tell you a grep command to run to figure out what you need to change.  Then, it will make links in your home directory so that these files will actually be used.
+
+It is useful to have config files in a repo online so that you can keep them coordinated between different computers.  For instance, my linux virtual machine on my laptop, my linux install on my netbook, my account on Stanford's AFS space, and my environment when working over the summer all wanted to have the same files, and they all might sometimes update those files.  
+
+Sam's files are heavily commented so that you can read through what each line does and change it to fit your needs.  For instance, if you type in the inefficient QWERTY layout rather than Dvorak, there is a line in the zshrc that you might want to change so that the typo correction in zsh isn't messed up.  When you ran setup-startup-scripts, it should have told you a command to run to find all of the things that you need to change.
+
+If you prefer to use emacs, you'll have to google for .emacs files.
+
+In the mean time, you can run zsh on its own by typing zsh at the command line.  However, you may also want to change your default login shell to zsh.  There is a video on changing your login shell that you can watch after lab.
+
