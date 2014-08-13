@@ -109,6 +109,48 @@ make
 
 shell
 
+---------------------
+
+Permission:
+
+r:4, w:2, x:1
+
+user, group, others:
+
+chmod 777
+
+chmod u-x some
+
+chmod a+x some
+
+---------------------
+
+scp- copy some through network
+
+scp samking@pup.stanford.edu:foo foo   -> copy the file to current directory
+
+scp foo pup.stanford.edu:bar   -> auto find samking@pup but need password
+
+wget- get something from internet
+
+wget http://stanford.edu/~samking/cslu/scp.mp4  ->save to current directory
+
+----------------------
+
+cURL- do everything about url
+
+curl google.com   -> you will have the page
+
+curl http://google.com:80
+
+curl -L GOOGLE.COM   -> will auto redirect to the new page
+
+curl -O google.com/index.html  -> save this file to current directory
+
+curl -o google.com/index.html google -> save as google
+
+curl --libcurl foo.c google.com 
+
 
 
 
