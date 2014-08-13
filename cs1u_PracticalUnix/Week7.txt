@@ -1,0 +1,105 @@
+Week 7 Extended Web
+
+Submitted by laothao on Mon, 11/18/2013 - 18:50
+Modern Interfaces with the Web
+Your Stanford Web Space
+Did you know that you have web space on Stanford's servers? To see what's in your space, using your SUNetID, type in the URL http://stanford.edu/~yourSUNetID
+Be sure to replace "yourSUNetID" with your actual SUNetID
+Yes, the "~" is necessary
+You might just see a listing of things because your web space hasn't been configured yet. But, you can actually set up a personal profile page on here so that you have an official online presence.
+If you ssh via the Terminal into a myth or corn machine, you can manipulate the files that you saw in the listings. When you go to your web space, files will be served out of your WWW directory. If you create a file called index.html and place it into that folder, the next time you visit your web space, that file should be displayed on your browser.
+Let's do that!
+SSH
+According to Wikipedia, "Secure Shell (SSH) is a cryptographic network protocol for secure data communication, remote command-line login, remote command execution, and other secure network servicesbetween two networked computers"
+What this means is that you can access and use the Stanford computers (or any network computer) as if they were your local computer. There are two computer clusters most people usually access: Myth and Corn. You've been using the Terminal to interact with your local computer. You can use it to interact with the computers in the Myth or Corn clusters in the same way. Open up the Terminal and try this command:
+ssh yourSUNetID@myth.stanford.edu
+Replace "yourSUNetID" with your actual SUNetID
+You could also have used "corn" instead of "myth". These two clusters ARE different in their setup and usage, but for our purposes either one is fine.
+Now you're in! You have found the contents of your AFS space, provided by Stanford. You can use the shell commands such as ls, cd, mkdir, etc just like we've been doing all quarter. You can run vim or emacs to edit files or run scripts as well. The shell that you're using probably won't be the same as the one you've been used to. Type in the command "echo $SHELL" without the quotes to see which shell you're using.
+Make your way to the WWW directory.
+If this is your first time here, there's probably not much content. As previously mentioned, if you make an "index.html" file then navigate to your web space with the browser, you can view that file. We'll do that here.
+Create a file called "index.html", type in "Hello world" then save and close the file.
+Open up a browser and go to: http://stanford.edu/~yourSUNetID
+FTP Clients
+Interacting with a remote server via the shell is a very useful skill to have. However, it's not as familiar as a graphical user interface and that's where an FTP client comes in. According to Wikipedia, "File Transfer Protocol (FTP) is a standard network protocol used to transfer files from one host to another host over a TCP-based network, such as the Internet". An FTP client is a software package that provides that transfer protocol, usually in a GUI form. We're going to get set up with one of those so that you can interact with a server via the shell and a GUI-based application. For most people, this will be easier than creating/editing files over SSH.
+Download Fetch onto your local machine
+Fetch is software that provides file transfer over FTP and Secure FTP (SFTP) and is something that I've used in a lot of classes at Stanford. There are other clients such as Cyberduck that you could use, but I've found that Fetch is very user-friendly and reliable. It's also provided free by Stanford! The installation instructions can be found here:
+https://itservices.stanford.edu/service/ess/mac/docs/fetch
+
+If you don't have a Mac, Cyberduck will work just fine. 
+
+Once you've got Fetch up and running, try getting access to your AFS space. Open up Fetch and configure as follows:
+
+Hostname: myth.stanford.edu
+
+Username: yourSUNetID
+
+Connect using: SFTP
+
+Password: yourLoginPassword
+
+Initial folder: (Don't type this in. Leave this area blank)
+
+Don't worry about the other settings. Click Connect!
+
+You can navigate around with the GUI on your AFS space just as you would on your local machine. You can also edit files with the local text editors on your machine! So if you weren't a big fan of vim or emacs, right click on a file and choose "Edit with" and select your editor of choice. Remember, FTP clients only transfer files. If you want to execute anything, use the shell.​
+
+​​Install Sublime
+
+While we love vim and emacs, newer text editors have made great advances in convenience, organization, and ease of use. Sublime is a popular text editor that offers great functionality so we'll be exploring it here. The download site is:
+
+http://www.sublimetext.com/2
+
+You can use Sublime in conjunction with Fetch to edit files by right clicking on a file and then selecting Sublime as your text editor. You can also make Sublime your default text editor so that you don't have to right click a file every time.
+
+Sublime is much more of what you're accustomed to, huh? If you love it so much, you can also use Sublime on the shell on your local machine by installing the command line tools. Type in the command:
+
+sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /bin/subl
+
+If that command didn't work for you, check out these pages:
+
+http://www.sublimetext.com/docs/2/osx_command_line.html
+
+http://stackoverflow.com/questions/10196449/installing-sublime-texts-com...
+
+What this does is create a soft link in your bin directory to the binary in the Sublime directory. This means that whenever you type in the command "subl" the shell will look for the binary in the /bin directory, find the soft link to the Sublime directory and execute the binary in there instead. 
+
+Now you can call the Sublime application just like you would vim or emacs like this:
+
+subl index.html
+
+This will create/open a file called index.html for editing
+
+Extra Exercises
+This tutorial takes you through installing LAMP (Linux, Apache, MySQL, and PHP) on Ubuntu.
+
+Many people have a local enviroment when developing web apps so that they don't have to deploy files to a server every time they want to test a new feature. This is an essential process in developing web apps and is one that I've had to do out in industry. So doing this now will give you valuable exposure! Finishing this lab will get you set up with a local web development environment so that you can implement and test your code locally before making it live.
+
+What is LAMP?
+LAMP stands for Linux, Apache, MySQL, and PHP.  The LAMP stack is what typical websites use to serve pages.  Linux is the operating system; Apache is the server (which responds to web requests); MySQL is the database; PHP is the web scripting language used to create web pages.
+ 
+Each piece is interchangeable. Instead of Linux, you can use Mac (MAMP).  On a side note, some people prefer nginx to Apache.  Some low traffic sites use SQLite (a database in one flat file), PostgreSQL, or NoSQL instead of MySQL.  Many sites include Perl, Python, and Ruby, in addition to PHP.  
+
+Exercises
+First, get LAMP or MAMP installed.  
+Since this is something that you'll do infrequently and that might change depending on the version of your operating system, you won't remember how to do it, but you might remember how to find how to do it.  Thus, look for a guide online.
+On Ubuntu, you should just be able to use your package manager (apt-get). Here's a recent guide I found that works: https://www.digitalocean.com/community/articles/how-to-install-linux-apa...
+Follow the steps through Step 3 and up to, but not including PHP Modules.
+When it installs MySQL in Step 2, you should set a root password!
+On a mac, if you don't have a package manager like macports installed, you'll need to just download a mac dmg.  Go to this site here: http://www.mamp.info/en/index.html
+Make sure that it's working
+localhost is a web address that refers to the current machine that you're on.  Thus, http://localhost will point you to the document root of the web server.  
+When LAMP is working, going to http://localhost should display a page that says that it works.
+If that doesn't work, it might be because of ports.  Every TCP or UDP web request that a server gets will have (among other things) an IP address and a port.  The IP address identifies the computer.  "localhost" means "use my own IP address."  If you don't provide a port, that means "use port 80, the default HTTP port."  LAMP, thus, will serve pages over port 80 by default.  However, macs aren't always quite so user friendly, and MAMP serves pages over port 8888 by default.  You can change this to port 80, or you can go to, for instance, http://localhost:8888.  
+Find the default document root
+This will be different depending on whether you're on Linux or on a BSD distribution like a mac, and it might even vary within your distribution of Linux.  It might help to include your distribution (like Ubuntu) when you Google to find the default document root.
+To test that you have found the right place, add an HTML file called "hello_world.html" to it (make sure that this file contains some text).  You will probably need root permissions (sudo) in order to move a file into the document root directory.  
+Now, visit  http://localhost/hello_world.html.  If everything worked correctly, you should see the webpage that you just created.
+Now, you know enough to use your own computer as a local environment for web development!
+Serve files from different places
+One apache server can serve multiple domains.  For instance, at Stanford, there is one apache server that serves out of a different document root for each student.  That way, the pages at stanford.edu/~samking are at /afs/ir/users/s/a/samking/WWW/ on the filesystem, and no student needs administrator privileges to edit their own web pages.
+Find the apache configuration directory.
+Change the default site so that it serves out of your home directory.  
+Verify that this works.  Note that you might need to restart apache or your http daemon (a daemon is a service that runs in the background).
+You might want to change it back afterwards.
+Extra: Add a new directory to serve from.  That way, you can serve from both the default location and from your home directory.  This will be a little bit more involved.  Try googling this first, but you might want to try looking into virtual hosts, aliases, or directories. 
