@@ -1,0 +1,44 @@
+Week 5: Scripting
+
+Submitted by laothao on Tue, 10/22/2013 - 00:38
+Before getting started, you should download the following two files and open them in a text editor (so you get syntax highlighting): http://stanford.edu/~lao793/cs1u/basics.py has some python basics and http://stanford.edu/~lao793/cs1u/tester.py has some code examples.  You should also check out Python's Popen and os modules -- os.system works for a lot of stuff, but it's a pretty blunt tool, and you can do a lot more with Popen and the os commands.
+
+0. Pre-Lab Questions
+
+What is the difference between subprocess.Popen and os.system?
+
+What is the difference between raw_input() and input()? For example, compare a variable "foo" that is equal to the input 2+2 with the variable "bar" that is equal to the raw_input 2+2.
+
+How would you access command-line arguments from a python script?
+
+Download the following file and try to run it:
+
+http://practicalunix.org/static/why-no-run.py
+
+Why doesn't it run if you try to execute it directly like this:
+
+ ./why-no-run.py
+
+Then, why does it run when you explicitly use python to invoke it like this:
+
+python why-no-run.py
+
+1.  Write a Basic Script
+
+Download the following file: 
+
+shakespeare_sonnets.txt 
+
+Write a script that finds how many times the word "love" appears in the file. We'll count it even if it's a part of a word, say "lovely", and also if it's capitalized as in "Love". Verify with us!
+
+If your script isn't already set up this way, make it so that your script can find the number of occurrences of ANY word. HINT: This involves pulling from the argumtents to the script.
+
+How many times does the word "thee" appear?
+
+How about the word "to"?
+
+How about the word "eternal"?
+
+2. Write a scripting script
+
+Now write a script that you can run ONCE, which determines the number of occurrences of the words "love", "thee", "to", and "eternal" from shakespeare_sonnets.txt all at once. This is a script that will run a script. It's almost like "meta" scripting. You should only need to run this script once!
