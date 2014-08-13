@@ -1,0 +1,63 @@
+Week 3: Pipelines
+
+Submitted by laothao on Tue, 10/08/2013 - 00:59
+Download pipelines.tar to access the files that these exercises reference.
+
+Unless otherwise indicated, all of these exercises should be done in one command.
+
+Note that some of these will not involve any piping. They are, however, all commands that are good to know for pipelines. Most of these are commands that you have not seen before, but they're all small and should have good man pages (or you can use Google). The name of the point is the name of the command that you will need to use (ie, head and tail are two commands).
+
+<
+read-input.py asks for 1000 numbers from stdin. Execute read-input.py and make it say "TRIUMPH!"
+If you're unfamiliar with how to execute read-input.py, check out the "Intro to Shell Scripting in Python" video
+Otherwise, type in the command "chmod +ux" followed by the name of the python file. Then you can execute it by typing "./" followed by the python file's name.
+note: nums-0-999 might help
+Thought question: when you execute read-input.py manually, each input will be on one line, so there would be 1000 lines by the end. When you use IO redirection to give it input, all of the output is on one line rather than 1000. Why is that? Hint: What key do you use to signal a newline character? 
+>, >>
+List the contents of your home directory and store that in a file
+List the contents of your home directory and append it to the same file
+Thought question: what happens if you have a file called foo and you run cat < foo > foo? Intuitively, that would say to use foo as the input to cat and output that to foo. Why isn't that the case? Hint: Try running something that doesn't create any output, for instance: touch bar > foo. Why is foo empty even though the command never tried to write to it? Note that CSH on the Stanford machines has 'noclobber' option set. This will prevent you from overwriting any files ("clobbering" them). That is annoying and will prevent you from doing this exercise. Instead, use ZSH.
+Thought question: what happens if you have a file called foo and you run cat < foo >> foo? Intuitively, that would print out foo and append it to foo, basically doubling the file. Why isn't that the case? Hint: How big is the file at the start and then how big is the file after cat has gone through the first line? Note: ctrl+C is your friend.
+head, tail
+Print the last three lines of table
+Print the first three lines of table
+Print only the second and third lines of table
+tr
+bad-new-line has a weird number of blank lines after each line of text. Create a file good-new-line that doesn't have a weird number of blank lines after each line of text. They should Replace it with just one line.
+Note: after your first try, if you have an error, it will probably help to consider where the input to tr comes from.
+sort
+We want to know who won the pumpkin size competition (in pumpkinsizes). We are interested in a couple of stats.
+1 - the top three winners
+2 - the two smallest pumpkins
+Note: alphabetically, "10" is before "2" even though 10 is greater than 2 in our pumpkin size competition. Be sure that sort is sorting things numerically.
+Note: what number is "|2" or "|10"? When sorting numerically, you need to make sure that your field only includes numbers, or it won't work. To do this, you can figure out a field delimiter to specify.
+Note: your solution should work regardless of the number of contestants. You should NOT operate under logic like "there are 11 contestants, so getting the top 2 is the same as removing the bottom 9."
+Do part a without including the headers!
+uniq
+words-sorted should contain the text of Week 5's lab with one word per line and all of the words sorted. Save all of the unique words to one file.
+Save the counts of all repeated words to another file. For instance, if "foo" appears twice, there should be a line in your output 2: foo. If "bar" appears once, it should not appear. NOTE: if you're on a mac, you can't easily do this. Feel free to skip over this one.
+words contains the text of Week 5's lab formatted normally. You will need to replace spaces with new lines and sort the file so that uniq can work properly. Then, save all of the unique words to one file. Note: uniq only works on sorted input!
+cut
+Normally, wc (word count) prints out the number of lines, words, and bytes in a file in addition to the filename. You want to just get the number of words WITH NO FILENAME.
+Note: the output of wc includes several spaces at the start. This might throw off your column number if you don't take care to get rid of excess spaces.
+Note: One way to get rid of the filename is to pipe input in from standard input. That doesn't answer the question at hand because that solution reduces the power of what we are able to do (and doesn't teach you cut). Your solution must be able to work on multiple files and output the number of words in each file on a separate line, which you can't do just by redirecting a single input file to standard input.
+join
+Remember: join requires sorted input!
+As before, pumpkinsizes contains the names and respective weights from the contest, emails contains the names and emails of all pumpkin carving contestants.
+First, join the emails and the pumpkin sizes together.
+Second, leverage your first solution and then get the email of the winner (only the email; not the name or anything else).
+Third, in the interest of misguided efficiency, you don't want to combine the emails and sizes prematurely. You only want to look up the email address of the winner. Instead of joining and then sorting, sort and then join.
+sed
+Given any input for the form (x_1, x_2) where x_i is an integer, put out (x_2, x_1). Use the file sed-numbers.
+Note: sed might require a flag to get the type of regular expressions you're used to.
+awk
+Given a file that holds a 5x5 table, print out another table that is some permutation. Use the file ‘table’
+tee
+Given a table (in file ‘table’), take its third and fourth columns and wherever they have (x x) as the row, column values make it (y y). Save the columns, however, before they are changed. This should be one command.
+comm
+If given two ‘.c’ files, figure out how you would use comm to calculate the ratio of the number of lines that are in both files to the number of lines that are unique to a file (bonus points if you do this as one command!)
+Remember
+perl and grep are also useful
+WTF?!
+
+What does this do: echo `echo scale=1.5\;``wc prog1.c -l | awk '{print $1 }'`/`wc prog1.c -l | awk '{print $1}'` | bc
