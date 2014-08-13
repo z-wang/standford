@@ -151,6 +151,66 @@ curl -o google.com/index.html google -> save as google
 
 curl --libcurl foo.c google.com 
 
+curl "http://www.googgle.com/serach#q=foo"
+
+curl http://www.htmlcodetutorial.com/cgi-bin/mycgi.pl -d realname=Sam 
+
+curl http://www.example.com --data0urlencode "foo=&bar"
+
+curl stanford.edu/~samking/ -I   -> show headline, -i head and content, -v, detail information **INHERE, you can change User-Agent in curl and get information from internet， 
+
+curl htto://www.htmlcodetutorial.com/cgi-bin/mycgi.pl -d "foo=bar" -d "bar=dzx" -v  -> get information of POST
+
+curl ... -H "foo: bar"   -> add to head line
+
+curl ... -H "Contentlength: "  -> deduce content length
+
+curl ... -X put   -> CHANGE METHOD from get/post to put
+
+curl whatismyipaddr -A "Mozilla/4.05"  -> change user agent
+
+------------------------
+
+Python subprocess and os library
+
+os.chdir
+
+os.system
+
+------------------------
+
+**piping: output to another input
+
+grep cat text1 | grep bird
+
+**redirect to another file: use >, continue >>
+
+grep cat text1 > templfile
+
+somecommand 2> /dev/null   -> nothing will happen
+
+**redirect a file to a standard input
+
+echo "sentence" > name
+
+command < name
+
+**Tee: ouput to stdout and a file
+
+ping google.org | tee ping
+
+tee ping == cat ping | and save to a file
+
+
+
+
+
+
+
+
+
+
+
 
 
 
