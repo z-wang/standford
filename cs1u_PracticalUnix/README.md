@@ -52,6 +52,65 @@ locate "*resume*"      need to update db using "sudo updatedb", the search speed
 
 locate "*resume*" | grep dir    for a sepecific dir.
 
+------------------------
+
+GDB debug for C files:
+
+Compile using gdb with -g, or using -g3 -gdwarf-2 if you want to include things like preprocessor macros. Probably also use -O0 to turn optimizations off.
+
+help
+
+r (run)
+
+list [line|function]
+
+b (break) [file:](line|function)
+
+n (next)
+
+p (print)
+
+disp (display)
+
+c (continue)
+
+q (quit)
+
+bt (backtrace)
+
+up
+
+down
+
+ena (enable)
+
+disa (disable)
+
+delete
+
+info - if you just say info, it tells you what you can get info aboute. some useful things to get info about include args, locals, registers, threads, breakpoints, and frame.
+
+s (step)
+
+ENTER (repeat the last command)
+
+until
+
+finish
+
+return - immediately returns without executing more lines of code until end
+
+jump - immediately goes to line without executing more lines of code inbetween
+
+x (examine) - p and x can look at data as any given type. /i (instruction) /d (digit) /c (character) and /s (string) are useful. with x, you can say something like x/10i to examine 10 instructions starting at the memory address you give it.
+watch - sets a watchpoint to notify you whenever a variable's value changes
+
+make
+
+shell
+
+
+
 
 
 
