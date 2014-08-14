@@ -141,12 +141,38 @@ cs249A	Object-Oriented Prog: A Modeling & Simul Perspect,	Linton, http://web.sta
 ---------------------
 Senior Level Study II: cs250-cs299
 
+cs254	Computational Complexity,	Williams, http://web.stanford.edu/class/cs254/
+
+cs255	Introduction to Cryptography,	Boneh, http://crypto.stanford.edu/~dabo/cs255/
+
+cs262	Computational Genomics,	Batzoglou, http://web.stanford.edu/class/cs262/cgi-bin/index.php
+
+cs266	Parameterized Algorithms and Complexity,	Williams, http://web.stanford.edu/~rrwill/cs266.html
+
+cs268	Geometric Algorithms,	Guibas, http://graphics.stanford.edu/courses/cs268-13-spring/
+
+cs273A	A Computational Tour of the Human Genome,	Batzoglou/Beje, http://web.stanford.edu/class/cs273a/cgi-bin/index.php
+
+cs275	Translational Bioinformatics,	Butte, http://bmi217.stanford.edu/
+
+cs275B	Music Query, Analysis and Style Simulation, http://wiki.ccarh.org/wiki/Music_254
+
+cs276	Information Retrieval and Web Search,	Manning/Nayak, http://web.stanford.edu/class/cs276/
+
+cs294S	Research Project in Software Systems and Security,	Lam, http://suif.stanford.edu/~courses/cs294s/
 
 ---------------------
 Professional Level Study I: cs300-cs399
 
+cs309A	Cloud Computing,	Chou, https://sites.google.com/site/stanfordcs309a/
 
+cs346	Database System Implementation,	Re, http://web.stanford.edu/class/cs346/
 
+cs347	Parallel and Distributed Data Management,	Garcia-Molina, http://web.stanford.edu/class/cs347/
+
+cs348B	Computer Graphics: Image Synthesis Techniques,	Hanrahan, http://candela.stanford.edu/
+
+cs376	Research Topics in Human-Computer Interaction,	Bernstein, http://hci.stanford.edu/courses/cs376/2014/
 
 ---------------------
 Professional Level Study II: cs400-cs999
