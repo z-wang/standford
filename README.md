@@ -55,6 +55,7 @@ cs131	Computer Vision: Foundations and Applications,	Li/Bourdev,  http://vision.
 cs140	Operating Systems and Systems Programming,	Mazieres, http://web.stanford.edu/~ouster/cgi-bin/cs140-spring14/index.php
 
 cs142	Web Applications,	Ousterhout, http://web.stanford.edu/class/cs142/cgi-bin/index.php
+also view his personal website: http://web.stanford.edu/~ouster/cgi-bin/home.php
 
 cs143	Compilers,	Treichler,  http://web.stanford.edu/class/cs143/
 
@@ -71,6 +72,22 @@ cs149	Parallel Computing,	Aiken/Olukotun,  http://class2go.stanford.edu/CS149/Wi
 
 ---------------------
 Junior Level Study II: cs150-cs199
+
+cs154	Introduction to Automata and Complexity Theory,	Williams, http://web.stanford.edu/~rrwill/cs154-2014/
+
+cs155	Computer and Network Security,	Boneh/Mitchell, http://crypto.stanford.edu/cs155/
+
+cs157	Logic and Automated Reasoning,	Genesereth, http://logic.stanford.edu/classes/cs157/2013/pages/cs157.html
+
+cs161	Design and Analysis of Algorithms,	Salihoglu, http://web.stanford.edu/class/cs161/
+
+cs170	Stanford Laptop Orchestra: Composition, Coding, Pe	Wang, https://ccrma.stanford.edu/courses/128/
+
+cs178	Digital Photography,	Levoy, http://graphics.stanford.edu/courses/cs178/
+
+cs193C	Client-Side Internet Technologies,	Young, http://web.stanford.edu/class/cs193c/
+
+cs193P	iPhone and iPad Application Programming,	Hegarty, http://web.stanford.edu/class/cs193p/cgi-bin/drupal/
 
 
 ---------------------
