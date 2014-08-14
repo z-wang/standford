@@ -103,9 +103,15 @@ Professional Level Study I: cs300-cs399
 
 
 ---------------------
-Professional Level Study II: cs400-cs599
+Professional Level Study II: cs400-cs999
 
+cs448X	Topics in Computer Graphics,	Hanrahan, http://physbam.stanford.edu/cs448x/
 
+cs476B	Mobile Music,	Wang, https://ccrma.stanford.edu/courses/256b/
+
+cs545	Database and Information Management Seminar,	Leskovec, http://i.stanford.edu/infoseminar/
+
+cs547	Human-Computer Interaction Seminar,	Bernstein, http://hci.stanford.edu/courses/cs547/
 
 
 ====================
