@@ -24,7 +24,6 @@ cs9   Problem-solving for the CS Technical Interview,	Cain/Lee,  http://web.stan
 cs42	Callback Me Maybe: Contemporary Javascript,	Schwarz/Nair, http://callbackjs.me/
 
 
-
 ---------------------
 Junior Level Study I: cs100-cs149
 
@@ -93,6 +92,51 @@ cs193P	iPhone and iPad Application Programming,	Hegarty, http://web.stanford.edu
 ---------------------
 Senior Level Study I: cs200-cs249
 
+cs202	Law for Computer Science Professionals,	Hansen, http://web.stanford.edu/class/cs202/
+
+cs204	Legal Informatics,	Genesereth/Vog, http://logic.stanford.edu/classes/cs204/
+
+cs207	The Economics of Software,	Wiederhold/Sik, http://infolab.stanford.edu/pub/gio/CS207/CS207precis.html
+
+cs221	Artificial Intelligence: Principles & Techniques,	Liang, http://web.stanford.edu/class/cs221/
+
+cs224N	Natural Language Processing,	Manning, http://web.stanford.edu/class/cs224n/
+
+cs224U	Natural Language Understanding,	MacCartney/Pot, http://web.stanford.edu/class/cs224u/
+
+cs224W	Social and Information Network Analysis,	Leskovec, http://web.stanford.edu/class/cs224w/
+
+cs227B	General Game Playing,	Genesereth, http://logic.stanford.edu/classes/cs227/2014/index.html
+
+cs228	Probabilistic Graphical Models: Principles and Tec,	Ermon, https://www.coursera.org/course/pgm
+
+cs229	Machine Learning,	Ng, http://cs229.stanford.edu/
+
+cs229T	Statistical Learning Theory,	Liang, http://web.stanford.edu/class/cs229t/
+
+cs231A	Computer Vision:From 3D Recontruct to Recognition,	Savarese, http://cvgl.stanford.edu/teaching/cs231a_winter1314/
+
+cs231B	The Cutting Edge of Computer Vision,	Li, http://vision.stanford.edu/teaching/cs231b_spring1213/
+
+cs231M	Mobile Computer Vision,	Savarese, http://web.stanford.edu/class/cs231m/
+
+cs240	Advanced Topics in Operating Systems,	Engler, http://web.stanford.edu/class/cs240/
+
+cs243	Program Analysis and Optimizations,	Lam, http://web.stanford.edu/class/cs243/
+
+cs244	Advanced Topics in Networking,	McKeown, http://web.stanford.edu/class/cs244/
+
+cs244B	Distributed Systems,	Mazieres/Engle, http://web.stanford.edu/class/cs244b/
+
+cs245	Database System Principles,	Garcia-Molina, http://web.stanford.edu/class/cs245/
+
+cs246	Mining Massive Data Sets,	Leskovec, http://web.stanford.edu/class/cs246/
+
+cs246H	Mining Massive Datasets Hadoop Lab,	Leskovec/Templ, http://web.stanford.edu/class/cs246h/
+
+cs248	Interactive Computer Graphics,	Fedkiw, http://web.stanford.edu/class/cs248/
+
+cs249A	Object-Oriented Prog: A Modeling & Simul Perspect,	Linton, http://web.stanford.edu/class/cs249a/
 
 ---------------------
 Senior Level Study II: cs250-cs299
@@ -100,6 +144,8 @@ Senior Level Study II: cs250-cs299
 
 ---------------------
 Professional Level Study I: cs300-cs399
+
+
 
 
 ---------------------
