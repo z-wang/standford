@@ -22,3 +22,18 @@ SIC: Event Delegation Handout:
 https://s3.amazonaws.com/kevin1bucket/programming/javascript/SICEventDelegationHandout.txt
 
 
+----------------
+Lecture 1
+
+Full HTML reference: 
+http://html5doctor.com/  (Highly recommended)
+http://www.w3schools.com/html/html_intro.asp
+http://www.tizag.com/htmlT/
+
+---------------
+Lecture 2
+
+Special Global Objects: window, document
+
+document.documentElement
+
